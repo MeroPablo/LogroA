@@ -69,3 +69,14 @@ function eliminarContacto(index) {
     contactos.splice(index, 1);
     MostrarContactos();
 }
+function cancelarEdicion() {
+    limpiarFormulario();
+}
+document.getElementById('searchInput').addEventListener('input', function() {
+    const busqueda = this.value.toLowerCase();
+    const contactosFiltrados = contactos.filter(contacto => 
+        contacto.nombre.toLowerCase().includes(busqueda) || 
+        contacto.etiqueta.toLowerCase().includes(busqueda)
+    );
+    MostrarContactos(contactosFiltrados);
+});
