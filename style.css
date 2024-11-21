@@ -4,7 +4,7 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
-#contact, #buscar {
+#contactForm, #searchSection {
     background-color: #f4f4f4;
     padding: 20px;
     margin-bottom: 20px;
