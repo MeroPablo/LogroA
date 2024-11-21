@@ -7,18 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="cont">
-        <h1>Contacto</h1>
-        <div class="Add_conct">
-            <h2>Añadir Contacto</h2>
-            <form class="datos">
-                <input type="text" id="Nombres" placeholder="Nombres Completo" required />
-                <input type="tel" id="Numero" placeholder="Numero de celular" required />
-                <input type="email" id="Correo" placeholder="Correo Electronico" required />
-                <input type="text" id="label"  placeholder="Etiqueta (trabajo, familia,amigo)" required />
-                <button type="submit">Contacto Nuevo</button>
-            </form>
-            </div>
+    <h1>Gestión de Contactos</h1>
+
+    <section id="buscar">
+        <input type="text" id="searchInput" placeholder="Buscar por nombre o etiqueta">
+    </section>
+
+    <section id="contact">
+        <h2>Añadir/Editar Contacto</h2>
+        <input type="text" id="nombreInput" placeholder="Nombre Completo">
+        <input type="tel" id="telefonoInput" placeholder="Número de Teléfono">
+        <input type="email" id="correoInput" placeholder="Correo Electrónico">
+        <select id="etiquetaInput">
+            <option value="">Seleccionar Etiqueta</option>
+            <option value="familia">Familia</option>
+            <option value="trabajo">Trabajo</option>
+            <option value="amigos">Amigos</option>
+            <option value="otros">Otros</option>
+        </select>
+        <div class="actions">
+            <button onclick="guardarContacto()">Guardar</button>
+            <button onclick="cancelarEdicion()">Cancelar</button>
+        </div>
+    </section>
+
+    <section id="contactList">
+        <h2>Lista de Contactos</h2>
+        <table id="contactTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    <th>Correo</th>
+                    <th>Etiqueta</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="contactTableBody"></tbody>
+        </table>
+    </section>
+    <script src="logro.js "></script>
             
 </body>
 </html>
