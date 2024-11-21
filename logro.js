@@ -65,4 +65,7 @@ function editarContacto(index) {
     document.querySelector('#contactForm').classList.add('edit-mode');
 }
 
-
+function eliminarContacto(index) {
+    contactos.splice(index, 1);
+    MostrarContactos();
+}
