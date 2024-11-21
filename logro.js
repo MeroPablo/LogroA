@@ -53,3 +53,16 @@ function MostrarContactos(contactosFiltrados = contactos) {
     });
 }
 
+function editarContacto(index) {
+    const contacto = contactos[index];
+    document.getElementById('nombreInput').value = contacto.nombre;
+    document.getElementById('telefonoInput').value = contacto.telefono;
+    document.getElementById('correoInput').value = contacto.correo;
+    document.getElementById('etiquetaInput').value = contacto.etiqueta;
+
+    modoEdicion = true;
+    indiceEdicion = index;
+    document.querySelector('#contactForm').classList.add('edit-mode');
+}
+
+
